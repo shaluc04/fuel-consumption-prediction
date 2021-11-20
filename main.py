@@ -9,9 +9,8 @@ def predict():
     # get the user data from the post request
     vehicle_config = request.get_json()
 
-    with open("C:/Users/Shalu/Desktop/project/my_projects/mpg-predictions/model_files/mpg-predictions-model.bin", "rb") as f_in:
+    with open("model_files/mpg-predictions-model.bin", "rb") as f_in:
         model = pickle.load(f_in)
-        f_in.close()
 
     predictions = predict_mpg(vehicle_config, model)
 
