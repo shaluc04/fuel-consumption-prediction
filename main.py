@@ -4,7 +4,7 @@ from model_files.ml_model import predict_mpg
 
 app = Flask("mpg_prediction")
 
-@app.route('/predict', methods=["POST"])
+@app.route('/', methods=["POST"])
 def predict():
     # get the user data from the post request
     vehicle_config = request.get_json()
